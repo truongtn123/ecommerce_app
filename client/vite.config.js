@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         // target: 'http://localhost:8080/api',
-        target: 'https://ecommerce-app-7fb8.onrender.com//api',
+        target: 'https://ecommerce-app-7fb8.onrender.com/api',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
