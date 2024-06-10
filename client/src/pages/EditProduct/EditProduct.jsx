@@ -22,7 +22,8 @@ const EditProduct = () => {
       toast.success("Product Edit successfully");
       return navigate(`/dashboard/products/${id}`);
     } catch (error) {
-      return error;
+      toast.error("Product Edit Failed");
+      return navigate(`/dashboard/products/${id}`);
     }
   };
 
