@@ -1,0 +1,7 @@
+@import "../../mixins.scss";
+.products-header {
+    margin-top: 20px;
+    @include md {
+        margin-top: 40px;
+    }
+}

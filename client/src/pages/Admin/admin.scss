@@ -1,0 +1,21 @@
+@import "../../mixins.scss";
+.admin {
+    height: calc(100vh - 50px);
+    background-color: var(--background-secondary-color);
+    padding: 20px 0 0 0;
+    @include md {
+        height: calc(100vh - 70px);
+    }
+    .admin-main {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: 1fr 1fr ;
+        margin-top: 10px;
+        @include md {
+            gap: 30px;
+            margin: 40px;
+            margin-bottom: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}

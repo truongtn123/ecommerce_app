@@ -1,0 +1,172 @@
+@import "../../mixins.scss";
+.singleProduct {
+    width: 100%;
+    display: flex;
+    @include md {
+        align-items: center;
+        justify-content: space-between;
+        height: calc(100vh - 70px);
+    }
+    .singleProduct-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin-top: 20px;
+        @include md {
+        margin-top: 0;
+        flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .singleProduct-img {
+            width: 220px;
+            box-shadow: var(--text-color) 0 1px 4px 0 ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            @include md {
+                width: 450px;
+            }
+            img {
+                margin: 10px;
+                border-radius: 8px;
+                width: 90%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+        }
+        .content {
+            max-width: 600px;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .name {
+                text-transform: capitalize;
+                font-size: 16px;
+                font-weight: 600;
+                @include md {
+                    font-size: 24px;
+                }
+            }
+            .desc {
+                font-size: 12px;
+                font-weight: 400;
+                @include md {
+                    margin-top: 8px;
+                    font-size: 14px;
+                }
+            }
+            .colors {
+                display: flex; 
+                align-items: center;
+                gap: 5px;
+                .color {
+                    position: relative;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 10px;
+                    border: 0.5px solid var(--border-color);
+                    cursor: pointer;
+                    &.v2 {
+                        border: 2px solid var(--border-color);
+                        scale: 1.2;
+                    }
+                }
+            }
+            .price {
+                font-size: 14px;
+                span {
+                    margin-left: 8px;
+                }
+            }
+            .btn-cart {
+                display: flex;
+                @include md {
+                    margin-top: 30px;
+                }
+                .change-btn {
+                    width: fit-content;
+                    display: flex;
+                    border: 2px solid var(--text-color);
+                    margin-right: 10px;
+                    height: 30px;
+                    @include md {
+                        height: 50px;
+                    }
+                    span {
+                        font-size: 16px;
+                        width: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        color: var(--text-color);
+                        @include md {
+                            font-size: 20px;
+                        }
+                        &:nth-child(1) {
+                            border-right: 2px solid var(--text-color);
+                        }
+                        &:nth-child(2) {
+                            width: 30px;
+                            @include md {
+                                width: 60px;
+                            }
+                        }
+                        &:nth-child(3) {
+                            border-left: 2px solid var(--text-color);
+                        }
+                        &:hover {
+                            background-color: var(--color2);
+                        }
+                    }
+                    
+                }
+                button {
+                    outline: 0;
+                    border: 0;
+                    height: 30px;
+                    padding: 5px 10px;
+                    background-color: var(--color1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    cursor: pointer;
+                    @include md {
+                        height: 50px;
+                        width: 180px;
+                    }
+                    &:hover {
+                        background-color: var(--color2);
+                    }
+                    svg {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .pd-edit {
+                display: flex;
+                padding: 20px 0;
+                justify-content: flex-end;
+                align-items: center;
+                opacity: 0.7;
+                cursor: pointer;
+                text-decoration: underline;
+                @include md {
+                    font-size: 20px;
+                }
+                svg {
+                    display: block;
+                }
+                &:hover {
+                    color: var(--color1);
+                }
+            }
+        }
+    }
+}

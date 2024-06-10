@@ -1,0 +1,76 @@
+@import "../../../mixins.scss";
+.hero-banner {
+    height: 100%;
+    position: relative;
+    height: calc(100vh - 70px);
+    .contentWrapper {
+        padding: 40px 0;
+        .content {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            align-items: center;
+            @include md {
+                flex-direction: row;
+            }
+            img {
+                position: relative;
+                width: 200px;
+                @include md {
+                    width: 450px;
+                }
+            }
+            .text-content {
+                color: var(--text-color);
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 20px;
+                max-width: 500px;
+                h1 {
+                    font-size: 60px;
+                    @include md {
+                        font-size: 120px;
+                    }
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    @include md {
+                        line-height: 24px;
+                    }
+                }
+                .btn-banners {
+                    margin-top: 25px;
+                    display: flex;
+                    gap: 20px;
+                    .btn-banner {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        width: fit-content;
+                        border: 2px solid var(--color2);
+                        padding: 5px 10px;
+                        font-size: 14px;
+                        @include md {
+                            padding: 10px 20px;
+                        }
+                        cursor: pointer;
+                        background-color: var(--color1);
+                        color: white;
+                        &.v2{
+                            // border: 2px solid black;
+                            color: var(--text-color);
+                            background-color: var(--background-color);
+                        }
+                        transition: 0.3s;
+                        &:hover {
+                          background-color: var(--color2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

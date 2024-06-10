@@ -1,0 +1,20 @@
+@import "../../mixins.scss";
+.sectionHeading {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include md {
+        font-size: 24px;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 3px;
+        margin-top: 5px;
+        background-color: var(--color1);
+        @include md {
+            width: 100px;
+        }
+    }
+}

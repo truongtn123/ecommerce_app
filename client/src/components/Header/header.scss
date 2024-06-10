@@ -1,0 +1,111 @@
+@import "../../mixins.scss";
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #636363;
+    color: white;
+    height: 50px;
+    display: flex;
+    background-color: #212121;
+    z-index: 99;
+    @include md {
+        height: 70px;
+    }
+    .contentWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .mobileMenuItems {
+            cursor: pointer;
+            font-size: 20px;
+            @include md {
+                display: none;
+            }
+        }
+        .left {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 14px;
+            gap: 10px;
+            @include md {
+                gap: 30px;
+                font-size: 20px;
+            }
+            svg {
+                font-size: 16px;
+                @include md {
+                    font-size: 26px;
+                }
+            }
+        }
+        .logo-header {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            font-size: 34px;
+            font-weight: 500;
+            transition: 0.2s;
+            span {
+                color: var(--color1);
+            }
+            @include md {
+                display: block;
+            }
+        }
+        .menuIcons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+            @include md {
+                gap: 24px;
+            }
+            img {
+                width: 25px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                object-fit: cover;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                @include md {
+                    width: 35px;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                }
+            }
+            svg {
+                cursor: pointer;
+                font-size: 18px;
+                display: block;
+                @include md {
+                    font-size: 26px;
+                }
+            }
+            .cart-icon {
+                position: relative;
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    line-height: 1;
+                    background: var(--color1);
+                    border-radius: 10px;
+                    padding: 2px 6px;
+                    font-size: 12px;
+                    top: -8px;
+                    left: 8px;
+                    @include md {
+                        top: -10px;
+                        left: 12px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+

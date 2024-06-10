@@ -1,0 +1,37 @@
+@import "../../mixins.scss";
+.about {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 20px;
+    .titles {
+        gap: 10px;
+        display: flex;
+        
+        .title {
+            font-size: 32px;
+            text-align: center;
+            @include md {
+                font-size: 48px;
+            }
+            &.a0 {
+                font-weight: 700;
+            }
+            &.a1 {
+                font-weight: 600;
+                color: white;
+                background-color: var(--color2);
+                border-radius: 10px 25px;
+                padding: 0 10px;
+            }
+        }
+    }
+    p {
+        margin-top: 40px;
+        font-weight: 600;
+        max-width: 800px;
+    }
+}

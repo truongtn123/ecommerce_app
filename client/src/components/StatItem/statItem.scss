@@ -1,0 +1,47 @@
+@import "../../mixins.scss";
+.statItem {
+    cursor: pointer;
+    background-color: var(--background-color);
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: var(--text-color) 0 1px 4px 0 ;
+    @include md {
+        padding: 36px;
+    }
+    .stat-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .stat-count {
+            font-size: 24px;
+            font-weight: 500;
+            @include md {
+                font-size: 42px;
+            }
+        }
+        .stat-icon {
+            padding: 4px 8px;
+            border-radius: 4px;
+            @include md {
+                padding: 6px 10px;
+            }
+            svg {
+                font-size: 20px;
+                display: block;
+                @include md {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    .stat-content {
+        text-transform: capitalize;
+        font-size: 16px;
+        @include md {
+            font-size: 20px;
+        }
+    }
+}

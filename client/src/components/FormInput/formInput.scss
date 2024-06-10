@@ -1,0 +1,18 @@
+@import "../../mixins.scss";
+.input-content {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    @include md {
+        width: 280px;
+    }
+    label {
+        text-transform: capitalize;
+        margin-bottom: 5px;;
+    }
+    input {
+        border: 1px solid #212121;
+        border-radius: 4px;
+        padding: 8px;
+    }
+}

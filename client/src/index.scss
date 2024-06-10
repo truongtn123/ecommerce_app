@@ -1,0 +1,64 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  
+  --text-color: #212121;
+  --background-color: #ffff;
+  --shadow-color: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  --border-color: #857fff;
+  
+
+  --dark-color: #ffff;
+  --dark-bg-color: #5d5c5c;
+  --dark-shadow-color: rgba(225, 224, 224, 0.25) 0px 50px 100px -20px, rgba(237, 237, 237, 0.3) 0px 30px 60px -30px;
+  --border-dark: #ffff;
+
+  --color2: rgb(217, 98, 150);
+  --color1: #6c63ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.dark-theme {
+  --text-color: var(--dark-color);
+  --background-color: var(--dark-bg-color);
+  --shadow-color: var(--dark-shadow-color);
+  --border-color: var(--border-dark);
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.btn {
+  cursor: pointer;
+  color: #fff;
+  background: var(--color1);
+  border: 1px solid white;
+  text-transform: capitalize;
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+}
+.hover {
+  transition: 0.3s;
+  &:hover {
+    background-color: var(--color2);
+  }
+}
